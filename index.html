@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" href="./logo.png">
+    <title>Spotify Web-player: Music for everyone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Spotify.css">
+</head>
+<body>
+<div class="main">
+        <div class="sidebar">
+            <div class="nav">
+                <div class="nav-option" style="opacity: 1;" id="nav-home">
+                    <i class="fa-solid fa-house"></i>
+                    <a href="#">Home</a>
+                </div>
+                
+                <div class="nav-option" id="nav-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <a href="#">Search</a>
+                </div>
+            </div>
+
+            <div class="Library">
+                <div class="options">
+                    <div class="Library-options nav-option">
+                        <img src="./library_icon.png" alt="Library image">
+                        <a href="#">Your Library</a>
+                    </div>
+                    <div class="icons-Library">
+                        <i class="fa-solid fa-plus" id="library-plus-icon"></i>
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="Library-boxes">
+                    <div class="boxes">
+                        <p class="box-p1">Create your own playlist</p>
+                        <p class="box-p2">It's very easy we'll help you</p>
+                        <button class="badge" id="btn-create-playlist">Create playlist</button>
+                    </div>
+                    <div class="boxes-2">
+                        <p class="box-p1">Let's find some podcasts to follow</p>
+                        <p class="box-p2">We'll keep you updated on new episodes</p>
+                        <button class="badge">Browse podcasts</button>
+                    </div>
+                </div>
+                <div class="custom-playlists-container" id="custom-playlists-list">
+                    <div class="playlist-item" id="liked-songs-sidebar">
+                        <i class="fa-solid fa-heart" style="color: #1db954;"></i>
+                        <span>Liked Songs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="main-content">
+            <div class="sticky-nav">
+                <div class="sticktyNavIcons">
+                    <img src="./backward_icon (1).png" alt="icon">
+                    <img src="./forward_icon.png" class="hide" alt="icon-2">
+                </div>
+                <div class="search-bar-container" id="search-bar-container" style="display: none; margin-left: 1rem; flex: 1; max-width: 350px;">
+                    <i class="fa-solid fa-magnifying-glass search-icon-input"></i>
+                    <input type="text" id="search-input" placeholder="What do you want to play?" class="search-input" />
+                </div>
+                <div class="stickyNavOptions hide">
+                    <button class="badge">Explore Premium</button>
+                    <button class="badge-2"><i class="fa-solid fa-circle-down"></i>Install app</button>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+
+            <div id="home-view">
+                <h2>Recently played</h2>
+                <div class="card-container">
+                    <div class="card-1 song-card" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" data-title="Daylight" data-artist="David Kushner" data-img="./card1img.jpeg">
+                        <div class="card-img-container">
+                            <img src="./card1img.jpeg" alt="card-01">
+                            <div class="play-hover-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <p class="card-title">Daylight</p>
+                        <p class="card-subtitle">David Kushner</p>
+                    </div>
+                </div>
+
+                <h2>Trending near you</h2>
+                <div class="card-container">
+                    <div class="card-1 song-card" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" data-title="As It Was" data-artist="Harry Styles" data-img="./card2img.jpeg">
+                        <div class="card-img-container">
+                            <img src="./card2img.jpeg" alt="card-01">
+                            <div class="play-hover-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <p class="card-title">As It Was</p>
+                        <p class="card-subtitle">Harry Styles</p>
+                    </div>
+                    <div class="card-1 song-card" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" data-title="Flowers" data-artist="Miley Cyrus" data-img="./card3img.jpeg">
+                        <div class="card-img-container">
+                            <img src="./card3img.jpeg" alt="card-01">
+                            <div class="play-hover-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <p class="card-title">Flowers</p>
+                        <p class="card-subtitle">Miley Cyrus</p>
+                    </div>
+                    <div class="card-1 song-card" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" data-title="Stay" data-artist="Kid LAROI & Bieber" data-img="./card4img.jpeg">
+                        <div class="card-img-container">
+                            <img src="./card4img.jpeg" alt="card-01">
+                            <div class="play-hover-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <p class="card-title">Stay</p>
+                        <p class="card-subtitle">Kid LAROI & Bieber</p>
+                    </div>
+                </div>
+
+                <h2>Featured charts</h2>
+                <div class="card-container">
+                    <div class="card-1 song-card" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" data-title="Blinding Lights" data-artist="The Weeknd" data-img="./card5img.jpeg">
+                        <div class="card-img-container">
+                            <img src="./card5img.jpeg" alt="card-01">
+                            <div class="play-hover-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <p class="card-title">Blinding Lights</p>
+                        <p class="card-subtitle">The Weeknd</p>
+                    </div>
+                    <div class="card-1 song-card" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" data-title="Starboy" data-artist="The Weeknd" data-img="./card6img.jpeg">
+                        <div class="card-img-container">
+                            <img src="./card6img.jpeg" alt="card-01">
+                            <div class="play-hover-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <p class="card-title">Starboy</p>
+                        <p class="card-subtitle">The Weeknd</p>
+                    </div>
+                    <div class="card-1 song-card" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" data-title="Save Your Tears" data-artist="The Weeknd" data-img="./card6img.jpeg">
+                        <div class="card-img-container">
+                            <img src="./card6img.jpeg" alt="card-01">
+                            <div class="play-hover-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <p class="card-title">Save Your Tears</p>
+                        <p class="card-subtitle">The Weeknd</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="search-view" style="display: none;">
+                <h2>Browse all</h2>
+                <div class="search-grid">
+                    <div class="search-category-card" style="background-color: rgb(141, 103, 171);">
+                        <h3>Podcasts</h3>
+                    </div>
+                    <div class="search-category-card" style="background-color: rgb(30, 50, 100);">
+                        <h3>Made For You</h3>
+                    </div>
+                    <div class="search-category-card" style="background-color: rgb(232, 17, 137);">
+                        <h3>New Releases</h3>
+                    </div>
+                    <div class="search-category-card" style="background-color: rgb(115, 88, 255);">
+                        <h3>Pop</h3>
+                    </div>
+                    <div class="search-category-card" style="background-color: rgb(186, 93, 7);">
+                        <h3>Hip-Hop</h3>
+                    </div>
+                    <div class="search-category-card" style="background-color: rgb(225, 17, 140);">
+                        <h3>Latin</h3>
+                    </div>
+                    <div class="search-category-card" style="background-color: rgb(13, 115, 119);">
+                        <h3>Rock</h3>
+                    </div>
+                    <div class="search-category-card" style="background-color: rgb(80, 55, 80);">
+                        <h3>Gaming</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div id="liked-songs-view" style="display: none;">
+                <h2>Liked Songs</h2>
+                <div class="card-container" id="liked-songs-container">
+                    <!-- Dynamic liked tracks list here -->
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">For the Record</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Communities</h4>
+                        <ul>
+                            <li><a href="#">For Artists</a></li>
+                            <li><a href="#">Developers</a></li>
+                            <li><a href="#">Advertising</a></li>
+                            <li><a href="#">Investors</a></li>
+                            <li><a href="#">Vendors</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Free Mobile App</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-socials">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <div class="footer-bottom">
+                    <hr class="line">
+                    <p class="copyright">&copy; 2026 Spotify AB</p>
+                </div>
+            </footer>
+    </div>
+</div>
+<div class="music-player">
+    <div class="album-bar">
+        <div class="album-image">
+            <img src="./card1img.jpeg" alt="image1" class="album-image" id="player-album-art">
+        </div>
+        <div class="singer-songName">
+            <a href="#"><p class="song-name" id="player-song-title">Daylight</p></a>
+            <a href="#"><p class="singer-name" id="player-song-artist">David Kushner</p></a>
+        </div>
+        <div class="album-icon">
+            <i class="fa-regular fa-heart" id="player-heart-icon"></i>
+        </div>
+    </div>
+
+    <div class="play-bar">
+        <div class="play-icons">
+            <img src="./player_icon1.png" alt="shuffle" id="btn-shuffle">
+            <img src="./player_icon2.png" alt="prev" id="btn-prev">
+            <i class="fa-solid fa-circle-play" id="play-icon"></i>
+            <img src="./player_icon4.png" alt="next" id="btn-next">
+            <img src="./player_icon5.png" alt="repeat" id="btn-repeat">
+        </div>
+        <div class="progress-bar">
+            <span class="progress-time" id="player-curr-time">0:00</span>
+            <input type="range" min="0" max="100" value="0" class="play-volume" id="player-progress-slider">
+            <span class="progress-time" id="player-tot-time">0:00</span>
+        </div>
+    </div>
+    
+    <div class="control-bar">
+        <div class="control-icons">
+            <i class="fa-solid fa-play" id="btn-control-play" style="display:none;"></i>
+            <i class="fa-solid fa-headset"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-volume-high" id="btn-volume-icon"></i>
+            <div class="control-progress-bar-playbar">
+                <input type="range" min="0" max="100" value="80" class="control-volume" id="player-volume-slider"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Playlist Creation -->
+<div class="modal" id="playlist-modal" style="display: none;">
+    <div class="modal-content">
+        <h3>Create New Playlist</h3>
+        <input type="text" id="playlist-name-input" placeholder="My Playlist #1" class="modal-input" maxlength="25">
+        <div class="modal-buttons">
+            <button class="modal-btn cancel-btn" id="modal-cancel">Cancel</button>
+            <button class="modal-btn create-btn" id="modal-create">Create</button>
+        </div>
+    </div>
+</div>
+
+<!-- Hidden Audio Player -->
+<audio id="main-audio" style="display: none;"></audio>
+
+<script src="app.js"></script>
+</body>
+</html>
